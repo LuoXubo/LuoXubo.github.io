@@ -21,7 +21,7 @@ JointLoc: A Real-time Visual Localization Framework for Planetary UAVs Based on 
 **Xubo Luo**, Xue Wan, Yixing Gao, Yaolin Tian, Wei Zhang, Leizheng Shu
 
 - In order to accurately determine the position of the UAV in a planetary scene in the absence of the global navigation satellite system (GNSS), this paper proposes JointLoc, which estimates the real-time UAV position in the world coordinate system by adaptively fusing the absolute 2-degree-of-freedom (2-DoF) pose and the relative 6-degree-of-freedom (6-DoF) pose.
-- [Paper](https://arxiv.org/abs/2405.07429) [Project](/projects/iros2024.html)
+- [Paper](https://arxiv.org/abs/2405.07429) [Project](/projects/iros2024.html) [Code](https://github.com/LuoXubo/JointLoc)
 
 </div>
 </div>
