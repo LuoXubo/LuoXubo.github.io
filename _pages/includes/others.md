@@ -1,7 +1,7 @@
 # Educations
 
-- _2023.09 - 2026.06 (Expected)_, Master, University of Chinese Academy of Sciences, Beijing.
-- _2019.09 - 2023.06_, Bachelor, Shanghai University of Finance and Economics, Shanghai.
+- _2023.09 - 2026.06 (Expected)_, **M.E.** University of Chinese Academy of Sciences, Beijing.
+- _2019.09 - 2023.06_, **B.E.** Shanghai University of Finance and Economics, Shanghai.
 
 # Internships
 
@@ -11,4 +11,4 @@
 
 ## Paper Reviewer
 
-- _2023.09 - 2023.10_, IEEE Robotics and Automation Letters (RAL)
+- IEEE Robotics and Automation Letters (RAL)

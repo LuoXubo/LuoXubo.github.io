@@ -7,7 +7,7 @@
 
 # Site Settings
 title: 'Xubo Luo'
-description: 'Graduate student @UCAS, working on visual localization, machine vision and SLAM.'
+description: 'Graduate student @UCAS, working on visual localization, robot vision and SLAM.'
 repository: 'LuoXubo/LuoXubo.github.io'
 google_scholar_stats_use_cdn: false
 
@@ -23,7 +23,7 @@ baidu_site_verification:
 author:
   name: 'Xubo Luo'
   avatar: 'images/profile.png'
-  bio: 'Doing something interesting.'
+  bio: 'Of robot vision'
   location: 'Beijing'
   employer:
   pubmed:
