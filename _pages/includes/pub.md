@@ -1,6 +1,6 @@
 # Publications
 
-## UAV Localization
+## 🛰️ UAV Localization
 
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">ICoSR 2022</div><img src='images/icosr.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
@@ -26,7 +26,7 @@ JointLoc: A Real-time Visual Localization Framework for Planetary UAVs Based on 
 </div>
 </div>
 
-## Image Fusion
+## ⚕️ Image Fusion
 
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">CVIU</div><img src='images/cviu/pipeline.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
