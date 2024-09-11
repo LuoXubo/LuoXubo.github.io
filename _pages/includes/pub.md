@@ -38,7 +38,7 @@ HBANet: A hybrid boundary-aware attention network for infrared and visible image
 **Xubo Luo**, Liping Wang, Jinshuo Zhang, Dongmei Niu
 
 - In this article, we propose a novel image fusion approach based on hybrid boundary-aware attention, termed HBANet, which models global dependencies across the image and leverages boundary-wise prior knowledge to supplement local details. Specifically, we design a novel mixed boundary-aware attention module that is capable of leveraging spatial information to the fullest extent and integrating long dependencies across different domains.
-- _[Paper]()_ &ensp;
+- _[Paper](https://www.sciencedirect.com/science/article/abs/pii/S107731422400242X)_ &ensp;
   _[Project]()_
 
 </div>
