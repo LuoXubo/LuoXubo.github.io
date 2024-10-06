@@ -7,7 +7,7 @@
 ## Paper Reviewer
 
 - IEEE Robotics and Automation Letters (RAL)
-- IEEE TRANSACTIONS ON CIRCUITS AND SYSTEMS FOR VIDEO TECHNOLOGY
+- IEEE Transactions on Circuits and Systems for Video Technology
 - IEEE/SICE International Symposium on System Integrations (SII 2025)
 
 <a href="https://clustrmaps.com/site/1c0fe"  title="Visit tracker"><img src="//www.clustrmaps.com/map_v2.png?d=faaH39awAFjpfSaycb7D2A8vAa7bU0fN7uClpBlIO9g&cl=ffffff" style="margin: 0 auto;"/></a>
