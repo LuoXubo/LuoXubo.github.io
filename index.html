@@ -1,632 +1,327 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Xubo Luo - Research</title>
-    <link rel="shortcut icon" href="imgs/robot.png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Xubo Luo - Homepage</title>
+  <meta name="description" content="Xubo Luo's academic homepage. Research in embodied AI, robotics vision, and vision-language navigation.">
+  <meta name="keywords" content="Xubo Luo, embodied AI, robotics vision, vision-language navigation, academic homepage">
+  <link rel="icon" href="imgs/robot.png" type="image/png">
 
-        body {
-            font-family: 'Times New Roman', Times, serif;
-            line-height: 1.6;
-            color: #333;
-            background: #fff;
-            font-size: 16px;
-        }
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+  <script src="https://kit.fontawesome.com/a860a211d3.js" crossorigin="anonymous"></script>
 
-        /* Header */
-        .header {
-            border-bottom: 2px solid #2c5282;
-            padding: 30px 0;
-            margin-bottom: 40px;
-        }
-
-        .header-content {
-            display: flex;
-            align-items: center;
-            gap: 30px;
-        }
-
-        .profile-image {
-            width: 130px;
-            height: 178px;
-            border-radius: 8px;
-            border: 2px solid #e2e8f0;
-        }
-
-        .header-info h1 {
-            font-size: 2.5rem;
-            font-weight: normal;
-            color: #2c5282;
-            margin-bottom: 10px;
-        }
-
-        .header-info .position {
-            font-size: 1.2rem;
-            color: #4a5568;
-            margin-bottom: 15px;
-            font-style: italic;
-        }
-
-        .header-info .affiliation {
-            font-size: 1rem;
-            margin-bottom: 20px;
-            line-height: 1.5;
-        }
-
-        .contact-info {
-            display: flex;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-
-        .contact-info a {
-            color: #2c5282;
-            text-decoration: none;
-            padding: 8px 12px;
-            border: 1px solid #2c5282;
-            border-radius: 4px;
-            font-size: 0.9rem;
-            transition: all 0.2s ease;
-        }
-
-        .contact-info a:hover {
-            background: #2c5282;
-            color: white;
-        }
-
-        /* About Section */
-        .about-section {
-            margin-bottom: 50px;
-        }
-
-        .section-title {
-            font-size: 1.8rem;
-            color: #2c5282;
-            border-bottom: 1px solid #e2e8f0;
-            padding-bottom: 10px;
-            margin-bottom: 25px;
-            font-weight: normal;
-        }
-
-        .about-text {
-            font-size: 1.1rem;
-            line-height: 1.7;
-            text-align: justify;
-        }
-
-        .about-text strong {
-            color: #2c5282;
-        }
-
-        .about-text a {
-            color: #2c5282;
-            text-decoration: none;
-        }
-
-        .about-text a:hover {
-            text-decoration: underline;
-        }
-
-        /* Publications Section */
-        .publications-section {
-            margin-bottom: 50px;
-        }
-
-        .publications-note {
-            font-size: 0.9rem;
-            color: #666;
-            font-style: italic;
-            margin-bottom: 30px;
-        }
-
-        .publication-item {
-            display: flex;
-            margin-bottom: 40px;
-            padding-bottom: 30px;
-            border-bottom: 1px solid #f1f1f1;
-        }
-
-        .publication-item:last-child {
-            border-bottom: none;
-        }
-
-        .publication-image {
-            width: 220px;
-            height: 140px;
-            object-fit: contain;
-            background: #f8f9fa;
-            border: 1px solid #e2e8f0;
-            border-radius: 4px;
-            margin-right: 25px;
-            flex-shrink: 0;
-        }
-
-        .publication-content {
-            flex: 1;
-        }
-
-        .publication-title {
-            font-size: 1.1rem;
-            font-weight: bold;
-            color: #2c5282;
-            margin-bottom: 8px;
-            line-height: 1.4;
-        }
-
-        .publication-venue {
-            font-weight: bold;
-            color: #d69e2e;
-            margin-bottom: 8px;
-        }
-
-        .publication-authors {
-            color: #4a5568;
-            margin-bottom: 12px;
-            line-height: 1.5;
-        }
-
-        .publication-authors strong {
-            color: #2c5282;
-        }
-
-        .publication-links {
-            display: flex;
-            gap: 10px;
-            flex-wrap: wrap;
-        }
-
-        .publication-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 5px;
-            padding: 4px 8px;
-            border: 1px solid #cbd5e0;
-            border-radius: 3px;
-            text-decoration: none;
-            color: #4a5568;
-            font-size: 0.85rem;
-            transition: all 0.2s ease;
-        }
-
-        .publication-link:hover {
-            background: #f7fafc;
-            border-color: #2c5282;
-            color: #2c5282;
-        }
-
-        .publication-link i {
-            font-size: 0.8rem;
-        }
-
-        /* Research Interests */
-        .interests-section {
-            margin-bottom: 50px;
-        }
-
-        .interests-list {
-            list-style: none;
-            padding: 0;
-        }
-
-        .interests-list li {
-            padding: 8px 0;
-            border-bottom: 1px solid #f1f1f1;
-        }
-
-        .interests-list li:before {
-            content: "▪";
-            color: #2c5282;
-            margin-right: 10px;
-        }
-
-        /* Footer */
-        .footer {
-            border-top: 1px solid #e2e8f0;
-            padding: 30px 0;
-            margin-top: 50px;
-            text-align: center;
-            color: #666;
-            font-size: 0.9rem;
-        }
-
-        /* Open Source Projects Styles */
-        .open-source-cards {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 18px;
-            margin-top: 10px;
-        }
-
-        .os-card {
-            background: #f8f9fa;
-            border: 1px solid #e2e8f0;
-            border-radius: 8px;
-            padding: 18px 18px 14px 18px;
-            width: calc(33.333% - 12px);
-            min-width: 260px;
-            box-sizing: border-box;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            transition: box-shadow 0.2s;
-        }
-
-        .os-card:hover {
-            box-shadow: 0 4px 16px rgba(44,82,130,0.08);
-            border-color: #b2c2e0;
-        }
-
-        .os-card-header {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin-bottom: 10px;
-        }
-
-        .os-card-title {
-            font-size: 1.05rem;
-            font-weight: bold;
-            color: #2c5282;
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            gap: 7px;
-        }
-
-        .os-card-title:hover {
-            text-decoration: underline;
-        }
-
-        .os-star-badge {
-            height: 22px;
-            margin-left: 8px;
-        }
-
-        .os-card-desc {
-            font-size: 0.97rem;
-            color: #444;
-            margin-top: 2px;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .header-content {
-                flex-direction: column;
-                text-align: center;
-            }
-
-            .profile-image {
-                width: 108px;
-                height: 148px;
-            }
-
-            .header-info h1 {
-                font-size: 2rem;
-            }
-
-            .contact-info {
-                justify-content: center;
-            }
-
-            .publication-item {
-                flex-direction: column;
-            }
-
-            .publication-image {
-                width: 100%;
-                height: 200px;
-                margin-right: 0;
-                margin-bottom: 15px;
-            }
-
-            .publication-links {
-                justify-content: center;
-            }
-
-            .os-card {
-                width: calc(50% - 12px);
-            }
-        }
-
-        @media (max-width: 700px) {
-            .open-source-cards {
-                flex-direction: column;
-                gap: 12px;
-            }
-
-            .os-card {
-                width: 100%;
-                min-width: 0;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .container {
-                padding: 0 15px;
-            }
-
-            .header-info h1 {
-                font-size: 1.8rem;
-            }
-
-            .section-title {
-                font-size: 1.5rem;
-            }
-
-            .about-text {
-                font-size: 1rem;
-            }
-        }
-    </style>
+  <link rel="stylesheet" href="assets/css/font_sans_serif.css">
+  <link rel="stylesheet" href="assets/css/theme-luka.css">
 </head>
-<body>
-    <div class="container">
-        <!-- Header -->
-        <header class="header">
-            <div class="header-content">
-                <img src="imgs/profile.png" alt="Xubo Luo" class="profile-image">
-                <div class="header-info">
-                    <h1>Xubo Luo</h1>
-                    <p class="position">MPhil Student @ UCAS</p>
-                    <p class="affiliation">
-                        <strong>University of Chinese Academy of Sciences</strong><br>
-                        Supervised by Prof. <a href="https://people.ucas.ac.cn/~wanxue" target="_blank">Xue Wan</a>
-                    </p>
-                    <div class="contact-info">
-                        <a href="mailto:luoxubo23@mails.ucas.ac.cn">
-                            <i class="fas fa-envelope"></i> Email
-                        </a>
-                        <a href="https://scholar.google.com/citations?user=oGxPcIUAAAAJ" target="_blank">
-                            <i class="fas fa-graduation-cap"></i> Google Scholar
-                        </a>
-                        <a href="https://github.com/LuoXubo" target="_blank">
-                            <i class="fab fa-github"></i> GitHub
-                        </a>
-                        <a href="https://twitter.com/xubo_luo" target="_blank">
-                            <i class="fab fa-twitter"></i> Twitter
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </header>
-
-        <!-- About Section -->
-        <section class="about-section">
-            <h2 class="section-title">About Me</h2>
-            <p class="about-text">
-                <strong>Xubo Luo</strong> is a third-year graduate student at <a href="https://www.ucas.ac.cn/" target="_blank">University of Chinese Academy of Sciences</a>, supervised by Prof. <a href="https://people.ucas.ac.cn/~wanxue" target="_blank">Wan</a>. Previously, he obtained his Bachelor's degree from Shanghai University of Finance and Economy in 2023, advised by Dr. <a href="https://itcs.sufe.edu.cn/LlChinese/46/d0/c10100a149200/page.htm" target="_blank">Kwok</a>. His research interests include <strong>embodied AI</strong>, <strong>robotics vision</strong> and <strong>vision-language navigation</strong>.
-            </p>
-            <p class="about-text" style="color: #d69e2e; font-weight: bold;">
-                🎯 I am looking for a PhD position for 2026 Fall. Feel free to contact me if you or anyone is hiring.
-            </p>
-            <br><br>
-            <p class="about-text">
-                <strong>Recent News:</strong><br>
-                • [2026-01] One paper accepted to T-FR!<br>
-                • [2025-12] One paper accepted to RA-L!<br>
-                • [2025-10] Awarded the National Scholarship!<br>
-                • [2025-10] Awarded the Second Prize and Innovation Prize in the RoboSense Challenge in IROS 2025!<br>
-                • [2025-08] One paper accepted to SPAICE 2025!<br>
-                • [2024-09] One paper accepted to CVIU!<br>
-                • [2024-06] One paper accepted to IROS 2024!<br>
-                • [2024-06] First Place in CVPR AI4Space Workshop Challenge!<br>
-                • [2023-06] Graduate with honors from SUFE!<br>
-                • [2022-12] One paper accepted to ICoSR 2022!
-            </p>
-        </section>
-
-        <!-- Publications Section -->
-        <section class="publications-section">
-            <h2 class="section-title">Selected Publications</h2>
-
-            <div class="publication-item">
-                <img src="imgs/locus/pipeline.png" alt="Locus" class="publication-image">
-                <div class="publication-content">
-                    <h3 class="publication-title">Locus: Probabilistic Monocular 3D Visual Grounding</h3>
-                    <p class="publication-venue">The IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2026</p>
-                    <p class="publication-authors">
-                        <strong>Xubo Luo</strong>, Aodi Wu, Xue Wan, Wei Zhang.
-                    </p>
-                    <div class="publication-links">
-                        <a href="#" class="publication-link">
-                            <i class="fas fa-file-pdf"></i> Paper (Under Review)
-                        </a>
-                        <a href="https://anonymous.4open.science/r/StepNav" class="publication-link">
-                            <i class="fas fa-code"></i> Code
-                        </a>
-                        <a href="#" class="publication-link">
-                            <i class="fas fa-globe"></i> Project
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="publication-item">
-                <img src="imgs/stepnav/pipeline.png" alt="StepNav" class="publication-image">
-                <div class="publication-content">
-                    <h3 class="publication-title">StepNav: Structured Trajectory Priors for Efficient and Multimodal Visual Navigation</h3>
-                    <p class="publication-venue">The International Conference on Robotics and Automation (ICRA), 2025</p>
-                    <p class="publication-authors">
-                        <strong>Xubo Luo</strong>, Aodi Wu, Haodong Han, Xue Wan, Wei Zhang, Leizheng Shu.
-                    </p>
-                    <div class="publication-links">
-                        <a href="#" class="publication-link">
-                            <i class="fas fa-file-pdf"></i> Paper (Under Review)
-                        </a>
-                        <a href="https://anonymous.4open.science/r/StepNav" class="publication-link">
-                            <i class="fas fa-code"></i> Code
-                        </a>
-                        <a href="#" class="publication-link">
-                            <i class="fas fa-globe"></i> Project
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="publication-item">
-                <img src="imgs/kanloc/pipeline.png" alt="KAN3L" class="publication-image">
-                <div class="publication-content">
-                    <h3 class="publication-title">Learning to Anchor Visual Odometry: KAN-Based Pose Regression for Planetary Landing</h3>
-                    <p class="publication-venue">IEEE Robotics and Automation Letters (RA-L), 2025</p>
-                    <p class="publication-authors">
-                        <strong>Xubo Luo</strong>, Zhaojin Li, Xue Wan, Wei Zhang, Leizheng Shu.
-                    </p>
-                    <div class="publication-links">
-                        <a href="https://ieeexplore.ieee.org/document/11347533" class="publication-link">
-                            <i class="fas fa-file-pdf"></i> Paper
-                        </a>
-                        <a href="https://github.com/LuoXubo/KANLoc" class="publication-link">
-                            <i class="fas fa-code"></i> Code
-                        </a>
-                        <a href="https://luoxubo.github.io/KANLoc/" class="publication-link">
-                            <i class="fas fa-globe"></i> Project
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="publication-item">
-                <img src="imgs/dvd-mapal/pipeline.png" alt="DVD-MapAL" class="publication-image">
-                <div class="publication-content">
-                    <h3 class="publication-title">DVD-MapAL: Deep Visual Feature-Driven Map-Assisted Localization</h3>
-                    <p class="publication-venue">IEEE Transactions on Field Robotics (T-FR), 2025</p>
-                    <p class="publication-authors">
-                        <strong>Xubo Luo</strong>, Zeyuan Zhao, Shengyang Zhang, Xue Wan, Wei Zhang, Leizheng Shu.
-                    </p>
-                    <div class="publication-links">
-                        <a href="https://ieeexplore.ieee.org/document/11348956" class="publication-link">
-                            <i class="fas fa-file-pdf"></i> Paper
-                        </a>
-                        <a href="#" class="publication-link">
-                            <i class="fas fa-code"></i> Code
-                        </a>
-                        <a href="#" class="publication-link">
-                            <i class="fas fa-globe"></i> Project
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="publication-item">
-                <img src="imgs/jointloc/pipeline.png" alt="JointLoc" class="publication-image">
-                <div class="publication-content">
-                    <h3 class="publication-title">JointLoc: A Real-time Visual Localization Framework for Planetary UAVs Based on Joint Relative and Absolute Pose Estimation</h3>
-                    <p class="publication-venue">IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS), 2024</p>
-                    <p class="publication-authors">
-                        <strong>Xubo Luo</strong>, Xue Wan, Yixing Gao, Yaolin Tian, Wei Zhang, Leizheng Shu
-                    </p>
-                    <div class="publication-links">
-                        <a href="https://arxiv.org/abs/2405.07429" class="publication-link" target="_blank">
-                            <i class="fas fa-file-pdf"></i> Paper
-                        </a>
-                        <a href="https://github.com/LuoXubo/JointLoc" class="publication-link" target="_blank">
-                            <i class="fas fa-code"></i> Code
-                        </a>
-                        <a href="https://github.com/LuoXubo/JointLoc" class="publication-link" target="_blank">
-                            <i class="fas fa-globe"></i> Project
-                        </a>
-                    </div>
-                </div>
-            </div>
-                
-            <div class="publication-item">
-                <img src="imgs/hbanet/pipeline.png" alt="HBANet" class="publication-image">
-                <div class="publication-content">
-                    <h3 class="publication-title">HBANet: A hybrid boundary-aware attention network for infrared and
-                    visible image fusion</h3>
-                    <p class="publication-venue">Computer Vision and Image Understanding (CVIU), 2024</p>
-                    <p class="publication-authors">
-                        <strong>Xubo Luo</strong>, Liping Wang, Jinshuo Zhang, Dongmei Niu
-                    </p>
-                    <div class="publication-links">
-                        <a href="https://www.sciencedirect.com/science/article/abs/pii/S107731422400242X" class="publication-link" target="_blank">
-                            <i class="fas fa-file-pdf"></i> Paper
-                        </a>
-                        <a href="https://github.com/LuoXubo/HBANet" class="publication-link" target="_blank">
-                            <i class="fas fa-code"></i> Code
-                        </a>
-                        <a href="https://luoxubo.github.io/HBANet/" class="publication-link" target="_blank">
-                            <i class="fas fa-globe"></i> Project
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="publication-item">
-                <img src="imgs/uav-geoloc/icosr.png" alt="UAVLoc" class="publication-image">
-                <div class="publication-content">
-                    <h3 class="publication-title">Deep learning based cross-view image matching for UAV geo-localization</h3>
-                    <p class="publication-venue">International Conference On Service Robotics (ICoSR), 2022</p>
-                    <p class="publication-authors">
-                        <strong>Xubo Luo</strong>, Yaolin Tian, Xue Wan, Jingzhong Zhang, Ke Tao
-                    </p>
-                    <div class="publication-links">
-                        <a href="https://ieeexplore.ieee.org/abstract/document/10137193/" class="publication-link" target="_blank">
-                            <i class="fas fa-file-pdf"></i> Paper
-                        </a>
-                        <a href="https://github.com/LuoXubo/UAV-geoloc" class="publication-link" target="_blank">
-                            <i class="fas fa-code"></i> Code
-                        </a>
-                        <a href="https://luoxubo.github.io/UAV-geoloc/" class="publication-link" target="_blank">
-                            <i class="fas fa-globe"></i> Project
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Open Source Projects Section -->
-        <section class="publications-section">
-            <h2 class="section-title">Open Source Projects</h2>
-            <div class="open-source-cards">
-                <div class="os-card">
-                    <div class="os-card-header">
-                        <a href="https://github.com/LuoXubo/JointLoc" target="_blank" class="os-card-title">
-                            <i class="fab fa-github"></i> JointLoc
-                        </a>
-                        <img src="https://img.shields.io/github/stars/LuoXubo/JointLoc?style=social" alt="GitHub Stars" class="os-star-badge">
-                    </div>
-                    <div class="os-card-desc">Source code of JointLoc</div>
-                </div>
-                <div class="os-card">
-                    <div class="os-card-header">
-                        <a href="https://github.com/LuoXubo/IMU-Aided-Odometry" target="_blank" class="os-card-title">
-                            <i class="fab fa-github"></i> IMU-Aided Odometry
-                        </a>
-                        <img src="https://img.shields.io/github/stars/LuoXubo/IMU-Aided-Odometry?style=social" alt="GitHub Stars" class="os-star-badge">
-                    </div>
-                    <div class="os-card-desc">Odometry Trajectory Recursion Based on IMU Integral Interpolation.</div>
-                </div>
-                <div class="os-card">
-                    <div class="os-card-header">
-                        <a href="https://github.com/LuoXubo/FastMatch" target="_blank" class="os-card-title">
-                            <i class="fab fa-github"></i> FastMatch
-                        </a>
-                        <img src="https://img.shields.io/github/stars/LuoXubo/FastMatch?style=social" alt="GitHub Stars" class="os-star-badge">
-                    </div>
-                    <div class="os-card-desc">Review the matching speed of various algorithms.</div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Footer -->
-        <footer class="footer">
-            <p>&copy; 2025 - Current by Xubo Luo. All rights reserved.</p>
-        </footer>
+<body class="theme-luka">
+  <nav class="top-nav">
+    <div class="nav-container">
+      <div class="nav-left">
+        <a href="./">Home</a>
+      </div>
+      <div class="nav-right">
+        <button id="themeToggle" class="theme-toggle" title="Toggle theme" aria-label="Toggle theme">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+      </div>
     </div>
+  </nav>
+
+  <div class="wrapper">
+    <header class="sidebar">
+      <div class="profile-card">
+        <a class="image avatar">
+          <img src="imgs/profile.png" alt="Xubo Luo profile avatar">
+        </a>
+
+        <h1 class="site-name">Xubo Luo</h1>
+        <p class="site-email">luoxubo23@mails.ucas.ac.cn</p>
+        <p style="margin: -8px 0 18px; color: var(--luka-secondary); font-size: 14px;">MPhil Student @ UCAS</p>
+
+        <div class="social-icons">
+          <a href="mailto:luoxubo23@mails.ucas.ac.cn" title="Email"><i class="fa-solid fa-envelope"></i></a>
+          <a href="https://scholar.google.com/citations?user=oGxPcIUAAAAJ" title="Google Scholar"><i class="ai ai-google-scholar"></i></a>
+          <a href="https://github.com/LuoXubo" title="GitHub"><i class="fa-brands fa-github"></i></a>
+          <a href="https://twitter.com/xubo_luo" title="Twitter"><i class="fa-brands fa-twitter"></i></a>
+        </div>
+
+        <div class="visitor-card">
+          <div class="visitor-card-title">Open Position</div>
+          <div class="visitor-card-body">
+            I am looking for a PhD position for Fall 2026. Feel free to contact me if you are hiring.
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="content">
+      <div class="section" id="about">
+        <h2 class="section-title">About Me</h2>
+        <div class="section-body">
+          <p>Hello! I am <strong>Xubo Luo</strong>, a third-year graduate student at the <a href="https://www.ucas.ac.cn/" target="_blank" rel="noopener">University of Chinese Academy of Sciences</a>, supervised by Prof. <a href="https://people.ucas.ac.cn/~wanxue" target="_blank" rel="noopener">Xue Wan</a>.</p>
+          <p>Previously, I received my bachelor's degree from Shanghai University of Finance and Economy in 2023, advised by Dr. <a href="https://itcs.sufe.edu.cn/LlChinese/46/d0/c10100a149200/page.htm" target="_blank" rel="noopener">Kwok</a>. My research interests include <strong>embodied AI</strong>, <strong>robotics vision</strong>, and <strong>vision-language navigation</strong>.</p>
+          <p><strong><a href="assets/cv/luoxubo-cv.pdf" target="_blank" rel="noopener">Download my CV</a></strong></p>
+          <p><strong>Recent News</strong></p>
+          <ul style="margin: 0; padding-left: 20px;">
+            <li>[2026-01] One paper accepted to T-FR.</li>
+            <li>[2025-12] One paper accepted to RA-L.</li>
+            <li>[2025-10] Awarded the National Scholarship.</li>
+            <li>[2025-10] Awarded the Second Prize and Innovation Prize in the RoboSense Challenge at IROS 2025.</li>
+            <li>[2025-08] One paper accepted to SPAICE 2025.</li>
+            <li>[2024-09] One paper accepted to CVIU.</li>
+            <li>[2024-06] One paper accepted to IROS 2024.</li>
+            <li>[2024-06] First Place in CVPR AI4Space Workshop Challenge.</li>
+            <li>[2023-06] Graduated with honors from SUFE.</li>
+            <li>[2022-12] One paper accepted to ICoSR 2022.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="section" id="education">
+        <h2 class="section-title">Education</h2>
+        <div class="section-body">
+          <div class="card" style="margin-bottom: 12px;">
+            <div class="experience-item">
+              <img src="assets/img/institution.svg" alt="UCAS logo" class="institution-logo">
+              <div class="experience-content">
+                <p class="exp-title"><strong>University of Chinese Academy of Sciences</strong></p>
+                <p class="exp-detail">MPhil Student</p>
+                <p class="exp-detail"><em>Advisor:</em> Prof. Xue Wan</p>
+                <p class="exp-period">2023 - Present</p>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="experience-item">
+              <img src="assets/img/institution.svg" alt="SUFE logo" class="institution-logo">
+              <div class="experience-content">
+                <p class="exp-title"><strong>Shanghai University of Finance and Economy</strong></p>
+                <p class="exp-detail">Bachelor's Degree</p>
+                <p class="exp-detail"><em>Advisor:</em> Dr. Kwok</p>
+                <p class="exp-period">2019 - 2023</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section" id="experience">
+        <h2 class="section-title">Experience</h2>
+        <div class="section-body">
+          <div class="card timeline-item">
+            <div class="experience-item">
+              <img src="assets/img/institution.svg" alt="UCAS logo" class="institution-logo">
+              <div class="experience-content">
+                <p class="exp-title"><strong>University of Chinese Academy of Sciences</strong></p>
+                <p class="exp-detail">Graduate Researcher</p>
+                <p class="exp-detail"><em>Advisor:</em> Prof. Xue Wan</p>
+                <p class="exp-period">2023 - Present</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card timeline-item">
+            <div class="experience-item">
+              <img src="assets/img/institution.svg" alt="SUFE logo" class="institution-logo">
+              <div class="experience-content">
+                <p class="exp-title"><strong>Shanghai University of Finance and Economy</strong></p>
+                <p class="exp-detail">Undergraduate Researcher</p>
+                <p class="exp-detail"><em>Advisor:</em> Dr. Kwok</p>
+                <p class="exp-period">2022 - 2023</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section" id="projects">
+        <h2 class="section-title">Projects</h2>
+        <div class="section-body">
+          <div class="card project-card" style="margin-bottom: 10px;">
+            <a href="https://github.com/LuoXubo/JointLoc" target="_blank" rel="noopener">JointLoc</a>: Source code of JointLoc.
+          </div>
+          <div class="card project-card" style="margin-bottom: 10px;">
+            <a href="https://github.com/LuoXubo/IMU-Aided-Odometry" target="_blank" rel="noopener">IMU-Aided Odometry</a>: Odometry trajectory recursion based on IMU integral interpolation.
+          </div>
+          <div class="card project-card">
+            <a href="https://github.com/LuoXubo/FastMatch" target="_blank" rel="noopener">FastMatch</a>: Review the matching speed of various algorithms.
+          </div>
+        </div>
+      </div>
+
+      <div class="section" id="publications">
+        <h2 class="section-title">Publications</h2>
+        <div class="section-body">
+          <div class="publications">
+            <ol class="bibliography">
+              <li>
+                <div class="pub-row">
+                  <div class="pub-content">
+                    <div class="title">Locus: Probabilistic Monocular 3D Visual Grounding</div>
+                    <div class="author"><strong>Xubo Luo</strong>, Aodi Wu, Xue Wan, Wei Zhang</div>
+                    <div class="periodical"><em><strong>CVPR 2026</strong></em></div>
+                    <div class="links">
+                      <a href="#">Paper (Under Review)</a> / <a href="https://anonymous.4open.science/r/StepNav" target="_blank" rel="noopener">Code</a> / <a href="#">Project</a>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="pub-row">
+                  <div class="pub-content">
+                    <div class="title">StepNav: Structured Trajectory Priors for Efficient and Multimodal Visual Navigation</div>
+                    <div class="author"><strong>Xubo Luo</strong>, Aodi Wu, Haodong Han, Xue Wan, Wei Zhang, Leizheng Shu</div>
+                    <div class="periodical"><em><strong>ICRA 2025</strong></em></div>
+                    <div class="links">
+                      <a href="#">Paper (Under Review)</a> / <a href="https://anonymous.4open.science/r/StepNav" target="_blank" rel="noopener">Code</a> / <a href="#">Project</a>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="pub-row">
+                  <div class="pub-content">
+                    <div class="title">Learning to Anchor Visual Odometry: KAN-Based Pose Regression for Planetary Landing</div>
+                    <div class="author"><strong>Xubo Luo</strong>, Zhaojin Li, Xue Wan, Wei Zhang, Leizheng Shu</div>
+                    <div class="periodical"><em><strong>IEEE RA-L, 2025</strong></em></div>
+                    <div class="links">
+                      <a href="https://ieeexplore.ieee.org/document/11347533" target="_blank" rel="noopener">Paper</a> / <a href="https://github.com/LuoXubo/KANLoc" target="_blank" rel="noopener">Code</a> / <a href="https://luoxubo.github.io/KANLoc/" target="_blank" rel="noopener">Project</a>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="pub-row">
+                  <div class="pub-content">
+                    <div class="title">DVD-MapAL: Deep Visual Feature-Driven Map-Assisted Localization</div>
+                    <div class="author"><strong>Xubo Luo</strong>, Zeyuan Zhao, Shengyang Zhang, Xue Wan, Wei Zhang, Leizheng Shu</div>
+                    <div class="periodical"><em><strong>IEEE T-FR, 2025</strong></em></div>
+                    <div class="links">
+                      <a href="https://ieeexplore.ieee.org/document/11348956" target="_blank" rel="noopener">Paper</a> / <a href="#">Code</a> / <a href="#">Project</a>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="pub-row">
+                  <div class="pub-content">
+                    <div class="title">JointLoc: A Real-time Visual Localization Framework for Planetary UAVs Based on Joint Relative and Absolute Pose Estimation</div>
+                    <div class="author"><strong>Xubo Luo</strong>, Xue Wan, Yixing Gao, Yaolin Tian, Wei Zhang, Leizheng Shu</div>
+                    <div class="periodical"><em><strong>IROS 2024</strong></em></div>
+                    <div class="links">
+                      <a href="https://arxiv.org/abs/2405.07429" target="_blank" rel="noopener">Paper</a> / <a href="https://github.com/LuoXubo/JointLoc" target="_blank" rel="noopener">Code</a> / <a href="https://github.com/LuoXubo/JointLoc" target="_blank" rel="noopener">Project</a>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="pub-row">
+                  <div class="pub-content">
+                    <div class="title">HBANet: A Hybrid Boundary-Aware Attention Network for Infrared and Visible Image Fusion</div>
+                    <div class="author"><strong>Xubo Luo</strong>, Liping Wang, Jinshuo Zhang, Dongmei Niu</div>
+                    <div class="periodical"><em><strong>Computer Vision and Image Understanding, 2024</strong></em></div>
+                    <div class="links">
+                      <a href="https://www.sciencedirect.com/science/article/abs/pii/S107731422400242X" target="_blank" rel="noopener">Paper</a> / <a href="https://github.com/LuoXubo/HBANet" target="_blank" rel="noopener">Code</a> / <a href="https://luoxubo.github.io/HBANet/" target="_blank" rel="noopener">Project</a>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="pub-row">
+                  <div class="pub-content">
+                    <div class="title">Deep Learning Based Cross-View Image Matching for UAV Geo-Localization</div>
+                    <div class="author"><strong>Xubo Luo</strong>, Yaolin Tian, Xue Wan, Jingzhong Zhang, Ke Tao</div>
+                    <div class="periodical"><em><strong>ICoSR 2022</strong></em></div>
+                    <div class="links">
+                      <a href="https://ieeexplore.ieee.org/abstract/document/10137193/" target="_blank" rel="noopener">Paper</a> / <a href="https://github.com/LuoXubo/UAV-geoloc" target="_blank" rel="noopener">Code</a> / <a href="https://luoxubo.github.io/UAV-geoloc/" target="_blank" rel="noopener">Project</a>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </div>
+
+      <div class="section" id="awards">
+        <h2 class="section-title">Awards</h2>
+        <div class="section-body">
+          <div class="awards-grid">
+            <div class="award-item">
+              <span class="award-icon"><i class="fa-solid fa-award"></i></span>
+              <div class="award-text"><strong>National Scholarship (2025)</strong></div>
+            </div>
+            <div class="award-item">
+              <span class="award-icon"><i class="fa-solid fa-trophy"></i></span>
+              <div class="award-text"><strong>Second Prize and Innovation Prize, RoboSense Challenge at IROS 2025</strong></div>
+            </div>
+            <div class="award-item">
+              <span class="award-icon"><i class="fa-solid fa-medal"></i></span>
+              <div class="award-text"><strong>First Place, CVPR AI4Space Workshop Challenge (2024)</strong></div>
+            </div>
+            <div class="award-item">
+              <span class="award-icon"><i class="fa-solid fa-graduation-cap"></i></span>
+              <div class="award-text"><strong>Graduated with Honors from SUFE (2023)</strong></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <p>
+        &copy; 2026 Xubo Luo. All rights reserved.
+      </p>
+    </footer>
+  </div>
+
+  <script src="assets/js/scale.fix.js"></script>
+  <script>
+    (function() {
+      const themeToggle = document.getElementById('themeToggle');
+      const icon = themeToggle.querySelector('i');
+
+      function setTheme(isDark) {
+        document.documentElement.setAttribute('data-theme', isDark ? 'dark' : 'light');
+        icon.classList.toggle('fa-sun', isDark);
+        icon.classList.toggle('fa-moon', !isDark);
+        localStorage.setItem('theme', isDark ? 'dark' : 'light');
+      }
+
+      const savedTheme = localStorage.getItem('theme');
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      setTheme(savedTheme ? savedTheme === 'dark' : prefersDark);
+
+      themeToggle.addEventListener('click', function() {
+        const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+        setTheme(!isDark);
+      });
+
+      if ('IntersectionObserver' in window) {
+        const observer = new IntersectionObserver(function(entries) {
+          entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.section').forEach(function(el) {
+          observer.observe(el);
+        });
+      } else {
+        document.querySelectorAll('.section').forEach(function(el) {
+          el.classList.add('visible');
+        });
+      }
+    })();
+  </script>
 </body>
 </html>
