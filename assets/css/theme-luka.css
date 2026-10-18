@@ -277,6 +277,45 @@ body.theme-luka .section-body p {
   margin: 0 0 14px;
 }
 
+body.theme-luka .research-notice {
+  margin: 20px 0 24px;
+  padding: 16px 18px;
+  border: 1px solid var(--luka-border);
+  border-left: 3px solid var(--luka-accent);
+  border-radius: 8px;
+  background: var(--luka-social-bg);
+}
+
+body.theme-luka .research-notice p {
+  margin: 0;
+}
+
+body.theme-luka .research-notice a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+body.theme-luka .news-toggle {
+  margin-top: 12px;
+  padding: 8px 12px;
+  border: 1px solid var(--luka-border);
+  border-radius: 6px;
+  background: transparent;
+  color: var(--luka-text);
+  font: inherit;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+body.theme-luka .news-toggle:hover {
+  background: var(--luka-border);
+}
+
+body.theme-luka .news-toggle:focus-visible {
+  outline: 2px solid var(--luka-accent);
+  outline-offset: 3px;
+}
+
 body.theme-luka .card {
   background: transparent;
   padding: 0;
