@@ -17,7 +17,7 @@
   <script src="https://kit.fontawesome.com/a860a211d3.js" crossorigin="anonymous"></script>
 
   <link rel="stylesheet" href="assets/css/font_sans_serif.css">
-  <link rel="stylesheet" href="assets/css/theme-luka.css">
+  <link rel="stylesheet" href="assets/css/theme-luka.css?v=20261018-2">
 </head>
 <body class="theme-luka">
   <nav class="top-nav">
@@ -87,7 +87,7 @@
             <li>[2023-06] Graduated with honors from SUFE.</li>
             <li>[2022-12] One paper accepted to ICoSR 2022.</li>
           </ul>
-          <button id="news-toggle" class="news-toggle" type="button" aria-expanded="false" aria-controls="news-list" hidden>Show all news</button>
+          <button id="news-toggle" class="news-toggle" type="button" aria-expanded="false" aria-controls="news-list" hidden>View older news</button>
         </div>
       </div>
 
@@ -326,7 +326,7 @@
           item.hidden = !expanded && index >= visibleCount;
         });
         newsToggle.setAttribute('aria-expanded', String(expanded));
-        newsToggle.textContent = expanded ? 'Show less news' : 'Show all news (' + newsItems.length + ')';
+        newsToggle.textContent = expanded ? 'Show less' : 'View older news';
       }
 
       setNewsExpanded(false);
